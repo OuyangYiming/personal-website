@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
-      body {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding:40px;
-    ">
-      <img src='https://kangwenchang.com/logo.png' alt="康文昌" width="80px" height="80px">
-    </div>
-    <div style="
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 15px;
-      line-height: 1.7:
-      color: red;
-    ">
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p>
-    </div>
-    <div style="
-      background-color: #f1f1f1;
-      text-align: center;
-      padding:40px;
-      font-size: 12px;
-    ">
-      <p>我的网站</p>
-      <a href="https://kangwenchang.com/">友情链接</a>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="欧阳奕铭，四川大学数学与应用数学专业本科生。教育背景、个人经历与荣誉奖项。">
+  <title>欧阳奕铭 | 个人主页</title>
+  <style>
+    /* 页面样式：仅使用浏览器自带字体，不依赖外部文件。 */
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 20px; }
+    body {
+      max-width: 840px;
+      margin: 48px auto;
+      padding: 0 28px;
+      color: #222;
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+    header { padding-bottom: 22px; border-bottom: 1px solid #ddd; }
+    h1 { margin: 0 0 10px; font-size: 32px; line-height: 1.4; }
+    h2 { margin: 0 0 16px; font-size: 21px; line-height: 1.5; }
+    p { margin: 10px 0; }
+    a { color: #205e87; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { color: #143b55; }
+    a:focus-visible { outline: 2px solid #205e87; outline-offset: 4px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; font-size: 14px; }
+    section { margin-top: 34px; }
+    ul { margin: 0; padding-left: 1.5em; }
+    li { margin: 9px 0; }
+    .muted { color: #666; }
+    footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid #ddd; font-size: 13px; color: #666; }
+    @media (max-width: 600px) {
+      body { margin: 28px auto; padding: 0 20px; font-size: 15px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 20px; }
+      section { margin-top: 30px; }
+    }
+    @media print {
+      body { max-width: none; margin: 0; padding: 0; font-size: 11pt; }
+      nav, .back-top { display: none; }
+      h2 { break-after: avoid; }
+      li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body id="top">
+  <!-- 个人资料：直接修改下方文字即可。 -->
+  <header>
+    <h1>欧阳奕铭</h1>
+    <p>四川大学数学学院 · 数学与应用数学专业本科生</p>
+    <p class="muted">2024 级，预计 2028 年毕业 · 关注量化相关实习机会</p>
+    <!-- 联系邮箱：2024141210050@stu.scu.edu.cn，收到测试邮件并确认后再添加联系链接。 -->
+    <nav aria-label="页面导航">
+      <a href="#about">关于我</a>
+      <a href="#education">教育背景</a>
+      <a href="#experience">个人经历</a>
+      <a href="#honors">荣誉奖项</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 个人简介 -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">关于我</h2>
+      <p>我是欧阳奕铭，现就读于四川大学数学学院数学与应用数学专业。目前关注量化相关实习，正在学习 Python，希望结合数学与概率统计基础，逐步积累编程、数据处理与统计分析的实际经验.</p>
+    </section>
+
+    <!-- 教育背景：成绩与排名均注明对应学年。 -->
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">教育背景</h2>
+      <p><strong>四川大学 · 数学与应用数学 · 本科</strong><br><span class="muted">2024.09 — 2028.06（预计）</span></p>
+      <ul>
+        <li>2025—2026 学年必修课加权平均分 91.065，数学与应用数学专业排名第 1.</li>
+        <li>2025—2026 学年数学类必修课加权平均分 92.66.</li>
+        <li>相关课程：数学分析、高等代数、概率论与数理统计、实变函数、复变函数、基础拓扑学.</li>
+        <li>部分课程成绩：实变函数 98，复变函数 98，基础拓扑学 95.</li>
+      </ul>
+    </section>
+
+    <!-- 个人经历：新增经历时复制一行 li，再修改文字。 -->
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">个人经历</h2>
+      <ul>
+        <li><strong>数学公众号：</strong>独立完成选题、写作与发布，围绕数学学习撰写和整理内容.</li>
+        <li><strong>答疑与学习讨论：</strong>参与面向高中学生的数学答疑，并在期末组织学习讨论，交流题目的解法与推导过程.</li>
+        <li><strong>编程学习：</strong>正在学习 Python 基础语法，使用 VS Code 完成基础编程练习.</li>
+        <li><strong>英文阅读：</strong>能够阅读英文数学教材与专业资料.</li>
+      </ul>
+    </section>
+
+    <!-- 荣誉奖项：每项单独占一行 li，修改时保留赛区和获奖年份。 -->
+    <section id="honors" aria-labelledby="honors-title">
+      <h2 id="honors-title">荣誉奖项</h2>
+      <ul>
+        <li>2022 年全国高中数学联赛湖南赛区二等奖.</li>
+        <li>2023 年全国高中数学联赛湖南赛区二等奖.</li>
+        <li>2024 年全国大学生数学竞赛四川赛区二等奖.</li>
+        <li>2025 年全国大学生数学竞赛四川赛区一等奖.</li>
+        <li>2024 年四川大学优秀学生.</li>
+        <li>2025 年四川大学优秀学生.</li>
+
+        <li>2025—2026 学年国家奖学金.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 欧阳奕铭 · <a class="back-top" href="#top">返回顶部</a></p>
+  </footer>
+</body>
 </html>
+⋮⋮⋮⋮
