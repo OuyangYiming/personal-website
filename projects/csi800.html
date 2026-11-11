@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>中证 800 口径四因子月度研究与回测（v1.0，2026.11）</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- 本页由 content.md 导出. 文字只在内容源修改；版式在 build_site.py 模板与 style.css 修改. -->
+  <header>
+    <nav aria-label="返回"><a href="../index.html">返回首页</a></nav>
+    <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】标题与一句话，再运行 build_site.py. -->
+    <h1 class="project-title">中证 800 口径四因子月度研究与回测（v1.0，2026.11）</h1>
+    <p>检验“按动量、反转、低波动、低换手四条规则给股票打分，高分股票之后是否表现更好”（2018–2025，沪深 300 与中证 500 历史成分股）.</p>
+  </header>
+  <main>
+    <article aria-label="项目详情">
+      <!-- 修改 ../../personal-materials/content.md 的【项目经历】前三条要点，再运行 build_site.py. -->
+      <section aria-labelledby="work-title">
+        <h2 id="work-title">做了什么</h2>
+        <ul>
+          <li>使用 BaoStock 构建 2018–2025 年沪深 300 与中证 500 历史成分股池（1,344 只证券、约 243 万行日线），按月采用当时成分股并剔除 ST 与停牌，降低幸存者偏差</li>
+          <li>实现动量、反转、低波动、低换手四因子的月度截面排名与分层回测：月末收盘出信号、下一交易日开盘成交，含 15 bps 成本及涨跌停、停牌约束；综合分数平均 RankIC 0.082（ICIR 0.41），信号主要来自低波动与低换手（二者秩相关 0.67）</li>
+          <li>完成成本敏感性、分段表现、剔除缺价证券与月度超额 t 检验：Q5 年化高于同池等权基准 0.70 个百分点，但月度超额不显著（t≈-0.02），单边成本升至 30 bps 时优势消失；配套 7 项测试，含未来函数反面检验</li>
+        </ul>
+      </section>
+
+      <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】净值图、图注；资产来自项目仓库. -->
+      <figure>
+        <img src="../assets/mvp_nav.png" alt="中证 800 口径四因子月度研究与回测净值图：Q5 红色加粗，等权基准黑色虚线" width="2160" height="1170" loading="lazy" decoding="async">
+        <figcaption>Q5 红色加粗，等权基准黑色虚线</figcaption>
+      </figure>
+
+      <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】结论，再运行 build_site.py. -->
+      <section aria-labelledby="conclusion-title">
+        <h2 id="conclusion-title">结论</h2>
+        <p>高分组年化收益比同池等权基准高约 0.70 个百分点，但月度超额在统计上不显著；单边成本升到 0.3% 时优势消失. 这是研究练习，不是可交易策略.</p>
+      </section>
+
+      <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】局限，再运行 build_site.py. -->
+      <section aria-labelledby="limitations-title">
+        <h2 id="limitations-title">局限</h2>
+        <p>没有样本外验证；缺价与退市处理简化；未做行业与市值中性化；等权等选择未检验替代方案.</p>
+      </section>
+
+      <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】说明，再运行 build_site.py. -->
+      <section aria-labelledby="note-title">
+        <h2 id="note-title">说明</h2>
+        <p>本项目在 AI 编程助手协助下完成编码；研究设计、检查与验收由作者负责.</p>
+      </section>
+
+      <!-- 修改 ../../personal-materials/content.md 的【网站展示文案】三个链接，再运行 build_site.py. -->
+      <section aria-labelledby="links-title">
+        <h2 id="links-title">链接</h2>
+        <ul>
+        <li><a href="https://github.com/OuyangYiming/csi800-four-factor-backtest">GitHub 仓库</a></li>
+        <li><a href="https://github.com/OuyangYiming/csi800-four-factor-backtest/blob/main/report/report.pdf">研究报告 PDF</a></li>
+        <li><a href="https://github.com/OuyangYiming/csi800-four-factor-backtest/releases/tag/v1.0">v1.0 发布页</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
